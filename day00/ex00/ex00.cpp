@@ -1,10 +1,16 @@
-#include "ex00.hpp"
+#include <iostream>
+#include <cctype>
 
 int	main (int ac, char **argv)
 {
 	int	i;
 	int j;
 	j = 1;
+	if(ac == 1)
+	{
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
+		return(0);
+	}
 	while(j < ac)
 	{
 		i = -1;	
@@ -13,5 +19,6 @@ int	main (int ac, char **argv)
 			std::cout << argv[j] << " ";
 		j++;
 	}
+	std::cout << std::endl;
 	return(0);
 }
