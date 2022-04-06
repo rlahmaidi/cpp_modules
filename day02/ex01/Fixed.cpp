@@ -47,7 +47,7 @@ Fixed::Fixed(float const number)
 
 float	Fixed::toFloat( void ) const
 {
-		return fixed_point / ( 1 << number_of_fractional_bits);
+		return (float)fixed_point / (float)( 1 << number_of_fractional_bits);
 }
 
 int	Fixed::toInt( void ) const
