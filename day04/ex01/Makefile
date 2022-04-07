@@ -1,7 +1,7 @@
 C = c++  -std=c++98
 FLAG = -Wall -Wextra -Werror
 NAME = ex01
-SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp
+SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp
 
 all: $(NAME)
 

@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <cmath>
 
 class Fixed
 {
@@ -7,8 +9,8 @@ class Fixed
 			static const int number_of_fractional_bits = 8;
 	public:
 			Fixed(void);
-			Fixed(const Fixed& other);		//copy constructor
-			Fixed &operator=(const Fixed& rhs);//copy assignement operators
+			Fixed(const Fixed& other);
+			Fixed &operator=(const Fixed& rhs);
 			~Fixed();
 			int getRawBits( void ) const;
 			void setRawBits( int const raw );
@@ -18,7 +20,6 @@ class Fixed
 			Fixed(float const number);
 			float toFloat( void ) const;
 			int toInt( void ) const;
-			//returnType operator symbol (arguments);
 		/********** comparaison operators ****************************/
 
 		bool operator==(Fixed const &f);

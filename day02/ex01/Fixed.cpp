@@ -31,7 +31,7 @@ void Fixed::setRawBits( int const raw )
 
 Fixed::~Fixed()
 {
-	std::cout << "deconstructor called" << std::endl;
+	std::cout << "destructor called" << std::endl;
 }
 
 //ex01 functions 
@@ -42,7 +42,7 @@ Fixed::Fixed(int const number)
 
 Fixed::Fixed(float const number)
 {
-	fixed_point = number * (1 << number_of_fractional_bits);
+	fixed_point = roundf(number * (1 << number_of_fractional_bits));
 }
 
 float	Fixed::toFloat( void ) const

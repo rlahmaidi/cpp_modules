@@ -31,7 +31,7 @@ void Fixed::setRawBits( int const raw )
 
 Fixed::~Fixed()
 {
-	std::cout << "deconstructor called" << std::endl;
+	std::cout << "destructor called" << std::endl;
 }
 
 //ex01 functions 
@@ -179,3 +179,4 @@ std::ostream	&operator << (std::ostream& file, Fixed const &c)
 			else
 				return(b);
 		}
+		

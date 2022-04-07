@@ -1,6 +1,6 @@
 C = c++  -std=c++98
 FLAG = -Wall -Wextra -Werror
-NAME = ex00
+NAME = ex01
 SRCS = Fixed.cpp main.cpp
 
 all: $(NAME)
