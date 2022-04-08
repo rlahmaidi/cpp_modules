@@ -9,14 +9,27 @@ class Animal
             Animal();
             Animal(const Animal& A);
             Animal& operator=(const Animal& A);
-            ~Animal();
+            virtual ~Animal();
             std::string getType(void);
             void        setTrype(std::string _type);
             virtual void makesound(void);
 };
 
+class Brain
+{
+    private:
+            std::string ideas[100];
+    public:
+         Brain();
+         Brain(const Brain& B);
+         Brain& operator=(const Brain& B);
+         ~Brain();
+};
+
 class Dog:public Animal
 {
+    private:
+        Brain* brain;
     public:
             Dog();
             Dog(const Dog& D);
@@ -27,6 +40,8 @@ class Dog:public Animal
 
 class Cat:public Animal
 {  
+    private:
+    Brain* brain;
     public:
             Cat();
             Cat(const Cat& C);
@@ -35,13 +50,3 @@ class Cat:public Animal
             void makesound(void);
 };
 
-class Brain
-{
-    protected:
-            std::string type;
-    public:
-         Brain();
-         Brain(const Brain& A);
-         Brain& operator=(const Brain& A);
-         ~Brain();
-};
