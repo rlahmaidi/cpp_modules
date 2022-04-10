@@ -26,11 +26,11 @@ void ScavTrap::attack(const std::string& target)
 		std::cout << "you are done, good bye" << std::endl;
 		exit(0); 
 	}
-	std::cout << "ScavTrap attacks " << target << " causing " << this->getAttackDamage() << " points of damage" << std::endl;
+	std::cout << "ScavTrap " << this->getName() << " attacks " << target << " causing " << this->getAttackDamage() << " points of damage" << std::endl;
 	this->setEnergyPoint(this->getEnergyPoint() - 1);
 }
 
-void ScavTrap::guardGate()
+void ScavTrap::guardGate(void)
 {
-    std::cout <<"ScavTrap is now in Gate keeper mode" << std::endl;
+	std::cout << "ScavTrap " << this->getName() << " is now in Gate keeper mode" << std::endl;
 }

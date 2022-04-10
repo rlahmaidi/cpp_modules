@@ -80,6 +80,7 @@ void ClapTrap::attack(const std::string& target)
 	std::cout << "ClapTrap attacks " << target << " causing " << AttackDamage << " points of damage" << std::endl;
 	EnergyPoint -= 1;
 }
+
 void ClapTrap::takeDamage(unsigned int amount)
 {
 	if(HitPoint == 0 || EnergyPoint == 0)
