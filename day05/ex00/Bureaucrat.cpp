@@ -13,7 +13,7 @@ Bureaucrat::GradeTooHighException::~GradeTooHighException() throw()
 
 const char* Bureaucrat::GradeTooHighException::what() const throw()
 {
-    return ("Grade Too Hight");
+    return ("Grade Too Hight Exception");
 }
 
 
@@ -29,7 +29,7 @@ Bureaucrat::GradeTooLowException::~GradeTooLowException() throw()
 
 const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
-    return ("Grade Too Low");
+    return ("Grade Too Low Exception");
 }
 
 Bureaucrat::Bureaucrat(void)
@@ -93,4 +93,10 @@ void        Bureaucrat::decrement()
         throw (GradeTooLowException());
     else
         grade++;
+}
+
+std::ostream & operator<<( std::ostream & o, Bureaucrat const & rhs)
+{
+    o << rhs.GetName() << " bureaucrat grade " << rhs.GetGrade();
+    return o;
 }

@@ -1,5 +1,9 @@
+#ifndef BUREAUCRAT
+#define BUREAUCRAT
+
 #include <iostream>
 #include <string>
+#include "Form.hpp"
 
 class Bureaucrat
 {
@@ -31,4 +35,11 @@ class Bureaucrat
                     ~GradeTooLowException() throw();
                     const char* what() const throw();
             };
+
+            void	signForm( Form & form );
 };
+
+std::ostream & operator<<( std::ostream & o, Bureaucrat const & rhs);
+
+
+#endif
