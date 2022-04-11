@@ -40,7 +40,8 @@ Form::~Form()
 {
     std::cout << "Form default destructor called " << std::endl;
 }
-Form::Form(const Form& F) : sign(false),signGrade(0), excuteGrade(0)
+Form::Form(const Form& F) :
+ sign(F.sign),signGrade(F.signGrade), excuteGrade(F.excuteGrade)
 {
     this->sign = F.sign;
     this->target = F.target;

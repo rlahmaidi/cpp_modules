@@ -1,15 +1,15 @@
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
 
-Form::GradeTooHighException::GradeTooHighException() throw()
-{
+// Form::GradeTooHighException::GradeTooHighException() throw()
+// {
     
-}
+// }
 
-Form::GradeTooHighException::~GradeTooHighException() throw()
-{
+// Form::GradeTooHighException::~GradeTooHighException() throw()
+// {
     
-}
+// }
 
 const char* Form::GradeTooHighException::what() const throw()
 {
@@ -17,15 +17,15 @@ const char* Form::GradeTooHighException::what() const throw()
 }
 
 
-Form::GradeTooLowException::GradeTooLowException() throw()
-{
+// Form::GradeTooLowException::GradeTooLowException() throw()
+// {
     
-}
+// }
 
-Form::GradeTooLowException::~GradeTooLowException() throw()
-{
+// Form::GradeTooLowException::~GradeTooLowException() throw()
+// {
     
-}
+// }
 
 const char* Form::GradeTooLowException::what() const throw()// should i initialize them here too??
 {
@@ -44,6 +44,7 @@ Form::Form(const Form& F) : sign(false),signGrade(0), excuteGrade(0)
 {
     this->sign = F.sign;
 }
+
 Form& Form::operator=(const Form& F)
 {
     this->sign = F.sign;

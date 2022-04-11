@@ -17,11 +17,11 @@ ShrubberyCreationForm::~ShrubberyCreationForm(void)
 }
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& sh)
 {
-    setSign( sh.getSign());
+    *this = sh;
 }
 ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm& sh)
 {
-    setSign( sh.getSign());
+    Form::operator=(sh);
 	return(*this);
 }
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const 
@@ -30,7 +30,8 @@ if (getSign() == true  && getExcuteGrade() >= executor.getGrade())
     {
         std::string s = getTarget() + "_shrubbery";
         std::ofstream file(s);
-	
+		if (!file.is_open())
+			return;
 		file << "		                                                               &   &&   #                   \n";
 		file << "                                                                 .&.#&&&&&&&&&                      \n";
 		file << "                (%/.%%,  %          (   && #                   %&&&&&&&&&&&&&&(                     \n";

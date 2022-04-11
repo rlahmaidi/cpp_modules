@@ -16,7 +16,7 @@ class Form
             std::string target;
     public:
             Form(void);
-            ~Form(void);
+            virtual ~Form(void);
             Form(const Form& F);
             Form& operator=(const Form& F);
             Form(const std::string _name, const int _signGrade, const int _excuteGrade, std::string _target);

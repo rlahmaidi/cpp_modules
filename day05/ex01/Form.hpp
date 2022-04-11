@@ -21,15 +21,15 @@ class Form
             class GradeTooHighException : public std::exception
             {
                 public:
-                    GradeTooHighException() throw();
-                    ~GradeTooHighException() throw();
+                    // GradeTooHighException() throw();
+                    // ~GradeTooHighException() throw();
                     const char* what() const throw();
             };
             class GradeTooLowException : public std::exception
             {
                 public:
-                    GradeTooLowException() throw();
-                    ~GradeTooLowException() throw();
+                    // GradeTooLowException() throw();
+                    // ~GradeTooLowException() throw();
                     const char* what() const throw();
             };
 
