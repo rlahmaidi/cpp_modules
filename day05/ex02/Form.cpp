@@ -43,6 +43,8 @@ Form::~Form()
 Form::Form(const Form& F) : sign(false),signGrade(0), excuteGrade(0)
 {
     this->sign = F.sign;
+    this->target = F.target;
+    std::cout << "Form copy constructor called " << std::endl;
 }
 Form& Form::operator=(const Form& F)
 {
@@ -50,7 +52,7 @@ Form& Form::operator=(const Form& F)
     return *this;
 }
 
-Form::Form(const std::string _name, const int _signGrade, const int _excuteGrade):name(_name),sign(false), signGrade(_signGrade),excuteGrade(_excuteGrade)
+Form::Form(const std::string _name, const int _signGrade, const int _excuteGrade, std::string _target):name(_name),sign(false), signGrade(_signGrade),excuteGrade(_excuteGrade), target(_target)
 {
     std::cout << "Form parametrized constructor called " << std::endl;
 }
@@ -78,6 +80,15 @@ void              Form::setSign(bool    _sign)
     this->sign = _sign;
 }
 
+std::string        Form::getTarget(void) const
+{
+    return(this->target);
+}
+ void          Form::setTarget(std::string _target)
+ {
+     this->target = _target;
+ }
+    
 /**********end of seters and geters******/
 
 bool    Form::beSigned(Bureaucrat& B)
@@ -87,4 +98,13 @@ bool    Form::beSigned(Bureaucrat& B)
     else
         sign = true;
     return(sign);
+}
+
+std::ostream & operator<<( std::ostream & o, Form const & rhs)
+{
+    if (rhs.getSign() == true)
+        o << rhs.getName() << " exec grade: " << rhs.getExcuteGrade() << " signe grade: " << rhs.getSignGrade() << " signed";
+    else
+        o << rhs.getName() << " exec grade: " << rhs.getExcuteGrade() << " signe grade: " << rhs.getSignGrade() << " not signed";
+    return o;
 }

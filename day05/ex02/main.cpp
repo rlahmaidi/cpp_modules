@@ -1,18 +1,35 @@
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include <iostream>
+#include <string>
+
 int main()
 {
-    Bureaucrat s("suqrat", 9);
-    Form f("form", 10, 20);
+    std::string h = "General";
+    try 
+    {
+        Bureaucrat c(h, 1);
+        ShrubberyCreationForm a("rip");
+       // RobotomyRequestForm b("robot");
+        //PresidentialPardonForm d("zaphod");
 
-    try
-    {
-        //s.increment();
-        f.beSigned(s);
-        s.signForm(f);
+        std::cout  << a;
+        // std::cout  << b;
+        // std::cout  << d;
+       a.beSigned(c);
+        //b.BeSigned(c);
+        //d.BeSigned(c);
+        // std::cout  << a;
+        // std::cout  << b;
+        // std::cout  << d;
+        // a.execute(c);
+        //c.executeForm(d);
+        // d.execute(c);
     }
-    catch (Bureaucrat:: GradeTooLowException &b)
+    catch (std::exception &e)
     {
-        std::cout << b.what() << std::endl;
+        std::cout  << e.what()  <<std::endl;
     }
 }

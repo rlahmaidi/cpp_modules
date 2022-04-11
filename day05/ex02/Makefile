@@ -1,7 +1,7 @@
 C = c++  -std=c++98
 FLAG = -Wall -Wextra -Werror
 NAME = ex01
-SRCS = main.cpp Bureaucrat.cpp Form.cpp
+SRCS = main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp
 
 all: $(NAME)
 

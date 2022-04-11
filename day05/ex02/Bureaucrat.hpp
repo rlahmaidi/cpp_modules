@@ -3,8 +3,9 @@
 
 #include <iostream>
 #include <string>
-#include "Form.hpp"
+//#include "Form.hpp"
 
+class Form;
 class Bureaucrat
 {
     private:

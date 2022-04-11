@@ -88,3 +88,12 @@ bool    Form::beSigned(Bureaucrat& B)
         sign = true;
     return(sign);
 }
+
+std::ostream & operator<<( std::ostream & o, Form const & rhs)
+{
+    if (rhs.getSign() == true)
+        o << rhs.getName() << " exec grade: " << rhs.getExcuteGrade() << " signe grade: " << rhs.getSignGrade() << " signed";
+    else
+        o << rhs.getName() << " exec grade: " << rhs.getExcuteGrade() << " signe grade: " << rhs.getSignGrade() << " not signed";
+    return o;
+}
