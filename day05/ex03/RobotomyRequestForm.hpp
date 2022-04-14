@@ -1,3 +1,6 @@
+#ifndef ROBOTOMYREQUESTFORM
+#define ROBOTOMYREQUESTFORM
+
 #include "Form.hpp"
 
 class RobotomyRequestForm : public virtual Form
@@ -10,3 +13,5 @@ class RobotomyRequestForm : public virtual Form
             RobotomyRequestForm& operator=(const RobotomyRequestForm& sh);
             void execute(Bureaucrat const & executor) const  ;
 };
+
+#endif

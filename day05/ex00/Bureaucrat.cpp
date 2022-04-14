@@ -97,6 +97,6 @@ void        Bureaucrat::decrement()
 
 std::ostream & operator<<( std::ostream & o, Bureaucrat const & rhs)
 {
-    o << rhs.GetName() << " bureaucrat grade " << rhs.GetGrade();
+    o << rhs.name << " bureaucrat grade is " << rhs.grade << std::endl;
     return o;
 }
