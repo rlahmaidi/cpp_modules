@@ -10,7 +10,6 @@ Span::Span(unsigned int n)
 {
     N = n;
     size = 0;
-    
 }
 Span::Span(const Span & c)
 {
@@ -18,8 +17,7 @@ Span::Span(const Span & c)
 }
 Span::~Span()
 {
-
-    //delete arr;
+    
 }
 Span & Span::operator=(const Span & c)
 {

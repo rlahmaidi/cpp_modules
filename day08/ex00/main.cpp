@@ -9,7 +9,7 @@ int main()
     q.push(1);
     try
     {
-    int e = easyfind(a, 5);
+    int e = easyfind(a, 69);
     std::cout << e << std::endl;
    } catch (const char *c){
         std::cout << c << std::endl;
@@ -17,8 +17,8 @@ int main()
 
     try
     {
-    int e = easyfind(q, 69);
-    std::cout << e << std::endl;
+        int e = easyfind(q, 15);
+        std::cout << e << std::endl;
    } catch (const char *c){
         std::cout << c << std::endl;
     }

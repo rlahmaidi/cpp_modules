@@ -14,7 +14,6 @@ int main()
     v.push_back(101);
     v.push_back(101);
 
-
     Span sp = Span(12);
 
     try
@@ -27,11 +26,11 @@ int main()
         sp.addNumber(3);
         std::cout << sp.shortestSpan() << std::endl;
         std::cout << sp.longestSpan() << std::endl;
-        sp.addNumber(v.begin(), v.end());
+        sp.addNumber(v.begin() , v.begin() + 2);
     }
     catch(const char *e)
     {
-        std::cerr << e << '\n';
+        std::cerr << e << std::endl;
     }
     return 0;
 }

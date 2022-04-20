@@ -9,7 +9,7 @@ class Span
     int size;
     public:
             Span();
-            Span(unsigned int );
+            Span(unsigned int n);
             Span(const Span &);
             ~Span();
             Span & operator=(const Span &);
@@ -17,5 +17,4 @@ class Span
             void addNumber(int c);
             int longestSpan();
             int shortestSpan();
-
 };
